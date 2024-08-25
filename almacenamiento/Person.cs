@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clases
 {
@@ -46,27 +42,27 @@ namespace Clases
         #region CREAR METODOS
 
         public void ViewData()
-            {
-              Console.WriteLine("                             ");
-              Console.WriteLine("  *** DATOS DE LA PERSONA ***");
-              Console.WriteLine("                             ");
-              Console.WriteLine($"\tIdentificacion-> {idPerson}");
-              Console.WriteLine($"\tNombre --------> {firstname}");
-              Console.WriteLine($"\tApellido-------> {lastname}");
-              Console.WriteLine($"\tEdad-----------> {age}");
-			  Console.WriteLine($"\tEstatura-------> {heigth}");
-			  Console.WriteLine($"\tGenero---------> {gender}");
-			  Console.WriteLine($"\tCelular--------> {phone}");
-			  Console.WriteLine($"\tCorreo---------> {email}");
-			  Console.WriteLine("|________________________|\n\n");
+        {
+            Console.WriteLine("                             ");
+            Console.WriteLine("  *** DATOS DE LA PERSONA ***");
+            Console.WriteLine("                             ");
+            Console.WriteLine($"\tIdentificacion-> {idPerson}");
+            Console.WriteLine($"\tNombre --------> {firstname}");
+            Console.WriteLine($"\tApellido-------> {lastname}");
+            Console.WriteLine($"\tEdad-----------> {age}");
+            Console.WriteLine($"\tEstatura-------> {heigth}");
+            Console.WriteLine($"\tGenero---------> {gender}");
+            Console.WriteLine($"\tCelular--------> {phone}");
+            Console.WriteLine($"\tCorreo---------> {email}");
+            Console.WriteLine("|________________________|\n\n");
 
-		}
-		#region 
-		public void UpdateGender(string genero)
-		{
-			this.gender = genero;
-		
-		}
+        }
+        #region 
+        public void UpdateGender(string genero)
+        {
+            this.gender = genero;
+
+        }
         #endregion
 
 

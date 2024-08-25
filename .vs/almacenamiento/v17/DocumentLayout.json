@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|c:\\users\\user\\documents\\visual studio 2022\\csharp\\almacenamiento\\almacenamiento\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|solutionrelative:almacenamiento\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|solutionrelative:almacenamiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Person.cs",
+              "RelativeDocumentMoniker": "almacenamiento\\Person.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Person.cs",
+              "RelativeToolTip": "almacenamiento\\Person.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAUwAAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T00:48:52.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
+              "RelativeDocumentMoniker": "almacenamiento\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
+              "RelativeToolTip": "almacenamiento\\Program.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwDoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T00:47:04.167Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
