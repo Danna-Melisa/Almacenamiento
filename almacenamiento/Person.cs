@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Xml.Linq;
 
 namespace Clases
 {
@@ -11,13 +14,13 @@ namespace Clases
         private double heigth;
         private string gender;
         private string phone;
-        private string email;
+        private string[] email;
 
         #region constructores 
         // Constructor por defecto
         public Person() { }
 
-        public Person(int idPerson, string firstname, string lastname, int age, double heigth, string gender, string phone, string email)
+        public Person(int idPerson, string firstname, string lastname, int age, double heigth, string gender, string phone, string[] email)
         {
             this.IdPerson = idPerson;
             this.Firstname = firstname;
@@ -36,7 +39,7 @@ namespace Clases
         public double Heigth { get => heigth; set => heigth = value; }
         public string Gender { get => gender; set => gender = value; }
         public string Phone { get => phone; set => phone = value; }
-        public string Email { get => email; set => email = value; }
+        public string[] Email { get => email; set => email = value; }
         #endregion
 
         public void ViewData()
@@ -51,7 +54,17 @@ namespace Clases
             Console.WriteLine($"\tEstatura-------> {heigth:F2}");
             Console.WriteLine($"\tGenero---------> {gender}");
             Console.WriteLine($"\tCelular--------> {phone}");
-            Console.WriteLine($"\tCorreo---------> {email}");
+            Console.WriteLine($"\t----------Correos----------");
+            ViewEmails();
+
+        }
+
+        public void ViewEmails()
+        {
+            for (int i = 0; i < email.Length; i++)
+            {
+                Console.WriteLine($"\t{i}. {email[i]}");
+            }
 
         }
 

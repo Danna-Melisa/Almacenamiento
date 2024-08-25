@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|c:\\users\\user\\documents\\visual studio 2022\\csharp\\almacenamiento\\almacenamiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|solutionrelative:almacenamiento\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|c:\\users\\user\\documents\\visual studio 2022\\csharp\\almacenamiento\\almacenamiento\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E055588D-04D6-4C14-86FA-77451FA6A0E0}|almacenamiento\\almacenamiento.csproj|solutionrelative:almacenamiento\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
-              "RelativeDocumentMoniker": "almacenamiento\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
-              "RelativeToolTip": "almacenamiento\\Program.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwC4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T00:47:04.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Person.cs",
               "RelativeDocumentMoniker": "almacenamiento\\Person.cs",
               "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Person.cs",
               "RelativeToolTip": "almacenamiento\\Person.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAApwDIAAAA8AAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAmwDgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-25T00:48:52.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
+              "RelativeDocumentMoniker": "almacenamiento\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Documents\\Visual Studio 2022\\CSharp\\almacenamiento\\almacenamiento\\Program.cs",
+              "RelativeToolTip": "almacenamiento\\Program.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAYwAAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T00:47:04.167Z",
               "EditorCaption": ""
             }
           ]

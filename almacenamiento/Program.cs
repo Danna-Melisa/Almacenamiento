@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clases
 {
@@ -12,7 +8,10 @@ namespace Clases
         {
             #region utilizando el constructor por defecto 
             //instanciar , crear un objeto a partir de la class
-            Person person1 = new Person(1235, "Sara", "Gomez", 18, 1.60, "Femenino", "300300300300", "saragomez@gmail.com");
+
+            string[] emailsPerson1 = {"SaraGomez@gmail.com" , "fresita453@gmail.com", "sara.gomez@gmail.com", "sarita564@gmail.com"};
+
+            Person person1 = new Person(1235, "Sara", "Gomez", 18, 1.60, "Femenino", "300300300300", emailsPerson1);
 
             person1.ViewData();
 
@@ -101,10 +100,28 @@ namespace Clases
                     break;
 
                 case 7:
-                    Console.WriteLine("modifica el atributo \"email\" ");
+                    Console.WriteLine("cual correo quieres cambiar");
+
+                    person.ViewEmails();
+
+                    int emailsPosition = Convert.ToInt32(Console.ReadLine());
+
+                    while (emailsPosition > person.Email.Length - 1 && emailsPosition < 0)
+                    {
+
+                        Console.WriteLine("Ese no existe, escoge los que estan en esta lista para cambiar");
+
+                        person.ViewEmails();
+
+                        emailsPosition = Convert.ToInt32(Console.ReadLine());
+
+                    }
+
+                    Console.WriteLine("Ingresa el nuevo correo");
                     updateAtributteString = Console.ReadLine();
 
-                    person.Email = updateAtributteString;
+                    person.Email[emailsPosition] = updateAtributteString.ToLower().Trim();
+                    
                     break;
 
                 default:
