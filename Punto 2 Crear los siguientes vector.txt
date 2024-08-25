@@ -1,0 +1,67 @@
+Punto 2: Crear los siguientes vectores. Notas.
+
+using System; // Importa el espacio de nombres System, que contiene clases básicas como Console.
+using System.Collections.Generic; // Importa el espacio de nombres para trabajar con listas genéricas.
+using System.Linq; // Importa el espacio de nombres LINQ, que facilita la manipulación de datos en colecciones.
+
+class Program
+{
+    static void Main() // El método Main es el punto de entrada del programa.
+    {
+        // Llenamos las listas con los nombres de los estudiantes y sus notas ingresadas por el usuario.
+        List<string> estudiantes = new List<string> { "Esteban", "Isabella", "Kevin Andres", "Juan Esteban", "Nicolas", "Anguie Andrea", "Maria Camila" };
+        // Creamos una lista para almacenar las notas de los estudiantes.
+        List<double> notas = new List<double>();
+
+        // Recorremos cada estudiante para ingresar su nota.
+        for (int i = 0; i < estudiantes.Count; i++)
+        {
+            double nota;
+
+            // Asegurarse de que la nota esté en el rango de 0 a 5.
+            do
+            {
+                // Solicita al usuario ingresar la nota del estudiante actual.
+                Console.Write($"Por favor, ingrese la nota de {estudiantes[i]} (debe estar entre 0 y 5): ");
+                // Intenta convertir la entrada de texto a un número decimal (double).
+                if (!double.TryParse(Console.ReadLine(), out nota) || nota < 0 || nota > 5)
+                {
+                    // Si la conversión falla o la nota no está en el rango, muestra un mensaje de error.
+                    Console.WriteLine("Entrada inválida. La nota debe ser un número entre 0 y 5.");
+                }
+            } while (nota < 0 || nota > 5); // Repite el proceso hasta que el usuario ingrese una nota válida.
+
+            // Agregamos la nota a la lista de notas.
+            notas.Add(nota);
+        }
+
+        // Calculamos el total de todas las notas sumándolas.
+        double totalNotas = notas.Sum();
+        // Calculamos el promedio dividiendo el total de notas por la cantidad de estudiantes.
+        double promedio = totalNotas / notas.Count;
+        // Contamos cuántos estudiantes aprobaron (nota >= 3.0).
+        int aprobados = notas.Count(nota => nota >= 3.0);
+        // Calculamos cuántos estudiantes reprobaron restando el número de aprobados del total.
+        int reprobados = notas.Count - aprobados;
+
+        // Mostramos los resultados.
+        Console.WriteLine("\nEstudiante\tNota\tObservación");
+
+        // Recorremos cada estudiante para mostrar su nombre, nota y observación (GANÓ o REPROBÓ).
+        for (int i = 0; i < estudiantes.Count; i++)
+        {
+            // Determinamos si el estudiante aprobó o reprobó.
+            string observacion = notas[i] >= 3.0 ? "GANO" : "REPROBO";
+            // Imprimimos el nombre del estudiante, su nota y la observación.
+            Console.WriteLine($"{estudiantes[i]}\t{notas[i]}\t{observacion}");
+        }
+
+        // Resumen final del grupo.
+        // Mostramos el promedio del grupo.
+        Console.WriteLine($"\nPromedio del grupo: {promedio:F2}");
+        // Mostramos la cantidad de estudiantes que aprobaron.
+        Console.WriteLine($"Cantidad de Aprobados: {aprobados}");
+        // Mostramos la cantidad de estudiantes que reprobaron.
+        Console.WriteLine($"Cantidad de Reprobados: {reprobados}");
+    }
+}

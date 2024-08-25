@@ -1,0 +1,140 @@
+using System; // Importa el espacio de nombres System, que contiene clases básicas como Console.
+
+class Program
+{
+    static void Main() // El método Main es el punto de entrada del programa.
+    {
+        // Variables para almacenar la cantidad de personas y el total de dinero entregado por estrato.
+        int cantidadEstrato1 = 0; 
+        int cantidadEstrato2 = 0;
+        int totalDineroEstrato1 = 0;
+        int totalDineroEstrato2 = 0;
+
+        // Variables para almacenar la cantidad de personas según el número de hijos y el total de dinero entregado según esa categoría.
+        int cantidadSinHijos = 0;
+        int cantidadHijos12 = 0; // Para las personas con hasta 2 hijos.
+        int cantidadHijos3OMas = 0; // Para las personas con 3 hijos o más.
+        int totalDineroSinHijos = 0;
+        int totalDineroHijos12 = 0;
+        int totalDineroHijos3OMas = 0;
+
+        // Variable para almacenar el total de dinero entregado en bonos.
+        int totalBonos = 0;
+
+        // Ciclo principal del programa que sigue ejecutándose hasta que el usuario elija no ingresar más datos.
+        while (true)
+        {
+            // Pregunta al usuario si desea ingresar datos.
+            Console.WriteLine("Desea ingresar Datos? 1. Si 2. No");
+            string input = Console.ReadLine(); // Lee la respuesta del usuario.
+            int opcion;
+
+            // Valida que la entrada del usuario sea 1 o 2.
+            while (!int.TryParse(input, out opcion) || (opcion != 1 && opcion != 2))
+            {
+                Console.WriteLine("Entrada no válida. Por favor ingrese 1 para Si o 2 para No.");
+                input = Console.ReadLine(); // Si la entrada es inválida, vuelve a pedir la entrada.
+            }
+
+            // Si el usuario elige no ingresar más datos, se sale del ciclo.
+            if (opcion == 2) break;
+
+            // Solicita al usuario ingresar el estrato (1 o 2).
+            Console.WriteLine("Ingrese el estrato (1 o 2): ");
+            input = Console.ReadLine();
+            int estrato;
+
+            // Valida que el estrato sea 1 o 2.
+            while (!int.TryParse(input, out estrato) || (estrato != 1 && estrato != 2))
+            {
+                Console.WriteLine("Entrada no válida. Por favor ingrese 1 o 2 para el estrato.");
+                input = Console.ReadLine(); // Si la entrada es inválida, vuelve a pedir la entrada.
+            }
+
+            // Solicita al usuario ingresar el número de hijos.
+            Console.WriteLine("Ingrese el número de hijos: ");
+            input = Console.ReadLine();
+            int hijos;
+
+            // Valida que el número de hijos sea un número no negativo.
+            while (!int.TryParse(input, out hijos) || hijos < 0)
+            {
+                Console.WriteLine("Entrada no válida. Por favor ingrese un número de hijos válido (0 o mayor).");
+                input = Console.ReadLine(); // Si la entrada es inválida, vuelve a pedir la entrada.
+            }
+
+            // Inicializa el bono para la persona actual.
+            int bono = 0;
+
+            // Si el estrato es 1...
+            if (estrato == 1)
+            {
+                cantidadEstrato1++; // Incrementa la cantidad de personas del estrato 1.
+
+                // Determina el bono según el número de hijos.
+                if (hijos == 0)
+                {
+                    bono = 50000; // Bono para personas sin hijos.
+                    cantidadSinHijos++; // Incrementa la cantidad de personas sin hijos.
+                    totalDineroSinHijos += bono; // Suma el bono al total de dinero para personas sin hijos.
+                }
+                else if (hijos <= 2)
+                {
+                    bono = 25000; // Bono para personas con hasta 2 hijos.
+                    cantidadHijos12++; // Incrementa la cantidad de personas con hasta 2 hijos.
+                    totalDineroHijos12 += bono; // Suma el bono al total de dinero para personas con hasta 2 hijos.
+                }
+                else
+                {
+                    bono = 30000; // Bono para personas con 3 hijos o más.
+                    cantidadHijos3OMas++; // Incrementa la cantidad de personas con 3 hijos o más.
+                    totalDineroHijos3OMas += bono; // Suma el bono al total de dinero para personas con 3 hijos o más.
+                }
+                totalDineroEstrato1 += bono; // Suma el bono al total de dinero entregado al estrato 1.
+            }
+            // Si el estrato es 2...
+            else if (estrato == 2)
+            {
+                cantidadEstrato2++; // Incrementa la cantidad de personas del estrato 2.
+
+                // Determina el bono según el número de hijos.
+                if (hijos == 0)
+                {
+                    bono = 46500; // Bono para personas sin hijos.
+                    cantidadSinHijos++; // Incrementa la cantidad de personas sin hijos.
+                    totalDineroSinHijos += bono; // Suma el bono al total de dinero para personas sin hijos.
+                }
+                else if (hijos <= 2)
+                {
+                    bono = 21500; // Bono para personas con hasta 2 hijos.
+                    cantidadHijos12++; // Incrementa la cantidad de personas con hasta 2 hijos.
+                    totalDineroHijos12 += bono; // Suma el bono al total de dinero para personas con hasta 2 hijos.
+                }
+                else
+                {
+                    bono = 26500; // Bono para personas con 3 hijos o más.
+                    cantidadHijos3OMas++; // Incrementa la cantidad de personas con 3 hijos o más.
+                    totalDineroHijos3OMas += bono; // Suma el bono al total de dinero para personas con 3 hijos o más.
+                }
+                totalDineroEstrato2 += bono; // Suma el bono al total de dinero entregado al estrato 2.
+            }
+
+            // Suma el bono al total general de bonos entregados.
+            totalBonos += bono;
+        }
+
+        // Muestra el informe final al usuario.
+        Console.WriteLine("\nInforme:");
+        Console.WriteLine("Cantidad de personas del estrato 1: " + cantidadEstrato1);
+        Console.WriteLine("Cantidad de personas del estrato 2: " + cantidadEstrato2);
+        Console.WriteLine("Total de dinero entregado al estrato 1: " + totalDineroEstrato1);
+        Console.WriteLine("Total de dinero entregado al estrato 2: " + totalDineroEstrato2);
+        Console.WriteLine("Cantidad de personas que no tienen Hijos: " + cantidadSinHijos);
+        Console.WriteLine("Cantidad de personas que tienen hasta 2 Hijos: " + cantidadHijos12);
+        Console.WriteLine("Cantidad de personas que tienen mayor o igual a 3 Hijos: " + cantidadHijos3OMas);
+        Console.WriteLine("Total de dinero entregado a los beneficiarios que no tienen hijos: " + totalDineroSinHijos);
+        Console.WriteLine("Total de dinero entregado a los beneficiarios que tienen hasta 2 hijos: " + totalDineroHijos12);
+        Console.WriteLine("Total de dinero entregado a los beneficiarios que tienen mayor o igual a 3 hijos: " + totalDineroHijos3OMas);
+        Console.WriteLine("Total pagado por los bonos: " + totalBonos);
+    }
+}
