@@ -12,57 +12,110 @@ namespace Clases
         {
             #region utilizando el constructor por defecto 
             //instanciar , crear un objeto a partir de la class
-            Person person1 = new Person();
-            person1.IdPerson = 123456789;
-            person1.Firstname = "Paco";
-
-            Console.WriteLine("Cedula -->" + person1.IdPerson);
-            Console.WriteLine("Nombre -->" + person1.Firstname);
-            Console.ReadKey();
-            #endregion
-        }
-        static void Main(string[] args)
-        {
-            #region utilizando el constructor por defecto 
-            //instanciar , crear un objeto a partir de la class
-            Person person1 = new Person(1235, "Sara", "Gomez", 18, 1.60, "Femenino", "300300300300", "saragomez@.com");
-            Person person2 = new Person(1235, "Felipe", "Serbia", 20, 1.80, "Masculino", "300300300300", "felipe.serbia@.com");
-            Person person3 = new Person(1235, "Melisa", "Acevedo", 17, 1.55, "Femenino", "300300300300", "melisaacevedo@.com");
+            Person person1 = new Person(1235, "Sara", "Gomez", 18, 1.60, "Femenino", "300300300300", "saragomez@gmail.com");
 
             person1.ViewData();
-            person2.ViewData();
-            person3.ViewData();
 
-            person1.UpdateGender("No binario");
+            Console.Write("Desea cambiar algun dato? ");
+            string validarCambioDato = Console.ReadLine();
 
+            while (validarCambioDato.ToLower().Trim() == "si")
+            {
+
+                Console.WriteLine("Que atributo desea cambiar? " +
+                    "\n1.firtsname" +
+                    "\n2.lastname" +
+                    "\n3.age" +
+                    "\n4.height" +
+                    "\n5.gender" +
+                    "\n6.phone" +
+                    "\n7.email");
+                int cambiarDato = Convert.ToInt32(Console.ReadLine());
+                ModificarDato(person1, cambiarDato);
+
+                Console.WriteLine("DATO CAMBIADO CON EXITO");
+                person1.ViewData();
+
+                Console.Write("Desea modificar otro atributo? ");
+                validarCambioDato = Console.ReadLine();
+
+            }
+
+            Console.WriteLine("Fin programa");
 
             Console.ReadKey();
 
             #endregion
 
-            Console.WriteLine("Desea actualizar datos? presione 1.Si  2.No ");
-            string input = Console.ReadLine();
 
-            int opcion;
+        }
 
-            while (!int.TryParse(input, out opcion) || (opcion != 1 && opcion != 2))
+        public static void ModificarDato(Person person, int cambiarDato)
+        {
+            string updateAtributteString;
+            int updateAtributteInt;
+            double updateAtributteDouble;
+
+            switch (cambiarDato)
             {
-                Console.WriteLine("Entrada no válida. Por favor ingrese 1 para Si o 2 para No.");
-                input = Console.ReadLine();
-            }
+                case 1:
+                    Console.WriteLine("modifica el atributo \"firtsname\" ");
+                    updateAtributteString = Console.ReadLine();
 
-            if break == 2;
+                    person.Firstname = updateAtributteString;
+                    break;
+
+                case 2:
+                    Console.WriteLine("modifica el atributo \"lastname\" ");
+                    updateAtributteString = Console.ReadLine();
+
+                    person.Lastname = updateAtributteString;
+                    break;
+
+                case 3:
+                    Console.WriteLine("modifica el atributo \"age\" ");
+                    updateAtributteInt = Convert.ToInt32(Console.ReadLine());
+
+                    person.Age = updateAtributteInt;
+                    break;
+
+                case 4:
+                    Console.WriteLine("modifica el atributo \"heigth\" ");
+                    updateAtributteDouble = Convert.ToDouble(Console.ReadLine());
+
+                    person.Heigth = updateAtributteDouble;
+                    break;
+
+                case 5:
+                    Console.WriteLine("modifica el atributo \"gender\" ");
+                    updateAtributteString = Console.ReadLine();
+
+                    person.Gender = updateAtributteString;
+                    break;
+
+                case 6:
+                    Console.WriteLine("modifica el atributo \"phone\" ");
+                    updateAtributteString = Console.ReadLine();
+
+                    person.Phone = updateAtributteString;
+                    break;
+
+                case 7:
+                    Console.WriteLine("modifica el atributo \"email\" ");
+                    updateAtributteString = Console.ReadLine();
+
+                    person.Email = updateAtributteString;
+                    break;
+
+                default:
+                    Console.WriteLine("Ese atributo no existe");
+                    break;
+
+
+            }
 
 
         }
-    }
-
-    public void ModificarDato()
-    {
-
-        if ()
-
-
     }
 
 }

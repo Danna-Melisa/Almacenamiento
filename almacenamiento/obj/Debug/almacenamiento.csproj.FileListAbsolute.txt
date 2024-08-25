@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\obj\Debug\almacenamiento.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\obj\Debug\almacenamiento.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\bin\Debug\almacenamiento.exe.config
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\bin\Debug\almacenamiento.exe
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\bin\Debug\almacenamiento.pdb
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\obj\Debug\almacenamiento.exe
+C:\Users\User\Documents\Visual Studio 2022\CSharp\almacenamiento\almacenamiento\obj\Debug\almacenamiento.pdb

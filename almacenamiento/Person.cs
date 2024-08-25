@@ -39,8 +39,6 @@ namespace Clases
         public string Email { get => email; set => email = value; }
         #endregion
 
-        #region CREAR METODOS
-
         public void ViewData()
         {
             Console.WriteLine("                             ");
@@ -50,21 +48,12 @@ namespace Clases
             Console.WriteLine($"\tNombre --------> {firstname}");
             Console.WriteLine($"\tApellido-------> {lastname}");
             Console.WriteLine($"\tEdad-----------> {age}");
-            Console.WriteLine($"\tEstatura-------> {heigth}");
+            Console.WriteLine($"\tEstatura-------> {heigth:F2}");
             Console.WriteLine($"\tGenero---------> {gender}");
             Console.WriteLine($"\tCelular--------> {phone}");
             Console.WriteLine($"\tCorreo---------> {email}");
-            Console.WriteLine("|________________________|\n\n");
 
         }
-        #region 
-        public void UpdateGender(string genero)
-        {
-            this.gender = genero;
-
-        }
-        #endregion
-
 
     }
 }
